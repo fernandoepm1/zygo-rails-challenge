@@ -7,6 +7,7 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
+gem 'devise'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
