@@ -11,15 +11,21 @@
           =< "Grid"
 
   #books.row.list-group
-    .book-item.col-xs-4.col-lg-4
-      .thumbnail
-        img.group.list-group-image[alt="" src=""]
+    = @books.each do |book|
+      .book-item.col-xs-4.col-lg-4
+        .thumbnail
+          img.group.list-group-image[alt="" src=""]
 
-        .caption
-          h4.group.inner.list-group-item-heading
-            = "Book title"
-          p.group.inner.list-group-item-text
-            = "Book description"
-          .row
-            .col-xs-12.col-md-6
-              p.lead = "$21.000"
+          .caption
+            h4.group.inner.list-group-item-heading
+              = book.title
+
+            p.group.inner.list-group-item-text
+              = book.description
+
+            .row
+              .col-xs-12.col-md-6
+                p.lead = book.year
+
+  .text-center
+    = paginate @books
