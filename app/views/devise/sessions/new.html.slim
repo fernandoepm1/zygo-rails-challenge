@@ -1,0 +1,23 @@
+.sidenav
+  .login-main-text
+    h2
+      = "Zygo Rails Challenge"
+      br
+      = "Login Page"
+    p = "Login or register from here to access"
+
+.main
+  .col-md-6.col-sm-12
+    .login-form
+      = form_for(resource, as: resource_name,
+                           url: session_path(resource_name)) do |f|
+        .form-group
+          label Email
+          = f.text_field :email, type: 'email', class: 'form-control', placeholder: 'great.mail@email.com'
+
+        .form-group
+          label Password
+          = f.text_field :password, type: 'password', class: 'form-control', placeholder: 'A strong password'
+
+        button.btn.btn-black[type="submit"] = "Login"
+        button.btn.btn-secondary[type="submit"] = "Register"
