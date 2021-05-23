@@ -2,7 +2,7 @@ class CreateBooks < ActiveRecord::Migration[6.1]
   def change
     create_table :books do |t|
       t.string :title
-      t.string :sub_title
+      t.string :image_url
       t.string :description
       t.integer :year
       t.references :author, null: false, foreign_key: true

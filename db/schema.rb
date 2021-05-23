@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_05_22_011405) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
-    t.string "sub_title"
+    t.string "image_url"
     t.string "description"
     t.integer "year"
     t.bigint "author_id", null: false
