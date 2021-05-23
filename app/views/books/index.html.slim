@@ -1,6 +1,7 @@
 .container
-  .well.well-sm
-    strong = "Category Title"
+  .well.well-md
+    .form-outline.col-xs-10.col-lg-9
+      = render 'filters'
 
     .btn-group
       a#list.btn.btn-default.btn-sm[href="#"]
@@ -10,22 +11,27 @@
         span.glyphicon.glyphicon-th
           =< "Grid"
 
-  #books.row.list-group
-    = @books.each do |book|
-      .book-item.col-xs-4.col-lg-4
-        .thumbnail
-          img.group.list-group-image[alt="" src=""]
+  - if @books.any?
+    h5
+      strong = "#{@books_count} books found."
 
-          .caption
-            h4.group.inner.list-group-item-heading
-              = book.title
+    #books.row.row-cols-1.row-cols-md-5.g-4
+      - @books.each do |book|
+        .col
+          .book-item.card.h-100
+            img.card-img-top[alt="great book" src="#{book.image_url}"
+                             style="height: 160px"]
 
-            p.group.inner.list-group-item-text
-              = book.description
+            .card-body
+              h5.card-title
+                strong = book.title
+              p.card-text = book.description
 
-            .row
-              .col-xs-12.col-md-6
-                p.lead = book.year
+            .card-footer
+              small.text-muted = "Published in #{book.year} by #{book.author.name}"
 
-  .text-center
-    = paginate @books
+    .text-center
+      = paginate @books
+  - else
+    h5
+      strong = "No books were found."
