@@ -19,6 +19,8 @@ db/*.sqlite3
 /log/*
 /tmp/*
 
+.byebug_history
+
 # various artifacts
 **.war
 *.rbc
@@ -48,6 +50,8 @@ db/*.sqlite3
 /spec/routing
 /spec/views
 /specifications
+node_modules
+public/packs
 rerun.txt
 pickle-email-*.html
 
