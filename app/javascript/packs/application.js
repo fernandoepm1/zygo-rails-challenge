@@ -4,5 +4,12 @@
 //= require turbolinks
 //= require_tree .
 
-import 'bootstrap-icons/font/bootstrap-icons.css'
-require("packs/books/index")
+$(document).ready(function() {
+  $('#book-search').change(function() {
+    $(this).closest('form').submit();
+  });
+
+  $('#q_author_id_eq').change(function() {
+    $(this).closest('form').submit();
+  });
+});
