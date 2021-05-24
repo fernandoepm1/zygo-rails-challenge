@@ -52,6 +52,7 @@ db/*.sqlite3
 /specifications
 node_modules
 public/packs
+public/packs-test
 rerun.txt
 pickle-email-*.html
 
