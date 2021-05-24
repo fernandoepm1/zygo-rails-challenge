@@ -10,7 +10,7 @@
     h5
       strong = "#{@books_count} books found."
 
-    #books.row.row-cols-1.row-cols-md-5.g-4
+    #books.row.row-cols-1.row-cols-md-4.g-3
       - @books.each do |book|
         .book-item.col
           .card.h-100
@@ -18,7 +18,7 @@
 
             .card-body
               h5.card-title
-                strong = book.title
+                strong = "#{book.title} (##{book.id})"
               p.card-text = book.description
 
             .card-footer
