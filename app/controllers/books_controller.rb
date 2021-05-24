@@ -1,33 +1,22 @@
 # frozen_string_literal: true
 
 class BooksController < ApplicationController
-  before_action :set_book, only: :show
+  before_action :load_authors, only: :index
 
   def index
     @q = Book.ransack(params[:q])
 
     books = @q.result(distinct: true)
-    load_authors && count_books(books) if books.any?
+    @books_count = books.count
 
-    @books = @q.result(distinct: true)
-               .includes(:author)
-               .order(title: :asc)
-               .page(params[:page])
+    @books = books.includes(:author)
+                  .order(title: :asc)
+                  .page(params[:page])
   end
-
-  def show; end
 
   private
 
-  def set_book
-    @book = Book.find(params[:id])
-  end
-
   def load_authors
     @authors = Author.all
-  end
-
-  def count_books(books)
-    @books_count = books.count
   end
 end
