@@ -1,15 +1,15 @@
 {
-  "application.js": "/packs/js/application-36c1ef1e9b117b46e255.js",
-  "application.js.map": "/packs/js/application-36c1ef1e9b117b46e255.js.map",
+  "application.js": "/packs/js/application-08e68da2c2e3f9f9c11c.js",
+  "application.js.map": "/packs/js/application-08e68da2c2e3f9f9c11c.js.map",
   "books/index.js": "/packs/js/books/index-5468f56edad95582a464.js",
   "books/index.js.map": "/packs/js/books/index-5468f56edad95582a464.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-36c1ef1e9b117b46e255.js"
+        "/packs/js/application-08e68da2c2e3f9f9c11c.js"
       ],
       "js.map": [
-        "/packs/js/application-36c1ef1e9b117b46e255.js.map"
+        "/packs/js/application-08e68da2c2e3f9f9c11c.js.map"
       ]
     },
     "books/index": {
@@ -20,7 +20,5 @@
         "/packs/js/books/index-5468f56edad95582a464.js.map"
       ]
     }
-  },
-  "media/fonts/bootstrap-icons.woff2?856008caa5eb66df68595e734e59580d": "/packs/media/fonts/bootstrap-icons-dfd0ea12.woff2",
-  "media/fonts/bootstrap-icons.woff?856008caa5eb66df68595e734e59580d": "/packs/media/fonts/bootstrap-icons-94eeade1.woff"
+  }
 }

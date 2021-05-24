@@ -1,15 +1,7 @@
-//= require jquery
-//= require bootstrap-sprockets
-//= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+require("@rails/ujs").start()
+require("turbolinks").start()
+require("@rails/activestorage").start()
+require("channels")
+require("packs/books/index")
 
-$(document).ready(function() {
-  $('#book-search').change(function() {
-    $(this).closest('form').submit();
-  });
-
-  $('#q_author_id_eq').change(function() {
-    $(this).closest('form').submit();
-  });
-});
+console.log('Hello from application.js')
