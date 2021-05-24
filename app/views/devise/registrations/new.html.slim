@@ -1,0 +1,28 @@
+.sidenav
+  .login-main-text
+    h2
+      = link_to "Zygo Rails Challenge", root_path
+      br
+    h3
+      = "Admin Access"
+    p = "Login or register from here to access"
+
+.main
+  .col-md-6.col-sm-12
+    .login-form
+      = form_for(resource, as: resource_name,
+                           url: registration_path(resource_name)) do |f|
+
+        = f.hidden_field :admin, value: true
+
+        = form_group_for f, :email
+          = f.text_field :email, type: 'email', class: 'form-control', placeholder: 'great.mail@email.com'
+
+        = form_group_for f, :password
+          = f.text_field :password, type: 'password', class: 'form-control', placeholder: 'A strong password'
+
+        = form_group_for f, :special_code
+          = f.text_field :special_code, class: 'form-control', placeholder: 'A special code'
+
+        = link_to 'Login', new_user_session_path, class: 'btn btn-secondary'
+        =< f.submit 'Register', class: 'btn btn-black'
