@@ -9,16 +9,18 @@ RSpec.describe BooksController, type: :controller do
     before { get_index }
 
     context 'when no params are present' do
-      let!(:books) { create_list(:book, 5) }
       let(:params) { {} }
+
+      let!(:books) { create_list(:book, 3) }
 
       it 'returns http status 200 and renders index template', :aggregate_failures do
         expect(response).to have_http_status(:ok)
         expect(response).to render_template(:index)
       end
 
-      it 'returns all @books ordered by title' do
-        expect(assigns(:books).to_a).to eq(books.sort_by(&:title))
+      it 'returns all @books ordered by title', :aggregate_failures do
+        expect(assigns(:books).to_a.size).to eq(Book.count)
+        expect(assigns(:books).to_a).to eq(Book.order(title: :asc).to_a)
       end
     end
 
@@ -85,18 +87,20 @@ RSpec.describe BooksController, type: :controller do
     end
 
     context 'when ordering by book title descending' do
-      let!(:books) { create_list(:book, 5) }
       let(:params) do
         { q: { s: 'title desc' } }
       end
+
+      let!(:books) { create_list(:book, 3) }
 
       it 'returns http status 200 and renders index template', :aggregate_failures do
         expect(response).to have_http_status(:ok)
         expect(response).to render_template(:index)
       end
 
-      it 'returns all @books ordered by title descending' do
-        expect(assigns(:books).to_a).to eq(books.sort_by(&:title).reverse)
+      it 'returns all @books ordered by title descending', :aggregate_failures do
+        expect(assigns(:books).to_a.size).to eq(Book.count)
+        expect(assigns(:books).to_a).to eq(Book.order(title: :desc).to_a)
       end
     end
   end
