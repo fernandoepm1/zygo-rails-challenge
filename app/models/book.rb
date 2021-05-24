@@ -15,4 +15,6 @@
 #
 class Book < ApplicationRecord
   belongs_to :author
+
+  validates :title, :description, :year, presence: true
 end
