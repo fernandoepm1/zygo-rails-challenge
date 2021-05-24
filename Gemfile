@@ -14,7 +14,7 @@ gem 'kaminari'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rails_admin', '~> 2.0'
-gem 'rails_admin_softwarebrothers_theme', git: 'git@github.com:softwarebrothers/rails_admin_softwarebrothers_theme.git'
+gem 'rails_admin_softwarebrothers_theme', git: 'https://github.com/softwarebrothers/rails_admin_softwarebrothers_theme.git'
 gem 'ransack'
 gem 'rubocop', require: false
 gem 'sassc-rails', '>= 2.1.0'
@@ -27,7 +27,7 @@ group :development, :test do
   gem 'annotate'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
-  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
   gem 'rspec-rails', '~> 5.0.0'
 end
 

@@ -1,17 +1,17 @@
 GIT
-  remote: git@github.com:softwarebrothers/rails_admin_softwarebrothers_theme.git
-  revision: 390c3b8e86d6423b88e99b015dd3490b4c1707ce
-  specs:
-    rails_admin_softwarebrothers_theme (0.0.6)
-      rails (>= 4.2.0)
-
-GIT
   remote: https://github.com/faker-ruby/faker.git
   revision: 3f0ddf95d0905c7bd26409a682b33cec2e79a623
   branch: master
   specs:
     faker (2.18.0)
       i18n (>= 1.6, < 2)
+
+GIT
+  remote: https://github.com/softwarebrothers/rails_admin_softwarebrothers_theme.git
+  revision: 390c3b8e86d6423b88e99b015dd3490b4c1707ce
+  specs:
+    rails_admin_softwarebrothers_theme (0.0.6)
+      rails (>= 4.2.0)
 
 GEM
   remote: https://rubygems.org/
