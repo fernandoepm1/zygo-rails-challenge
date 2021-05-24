@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'factory_bot_rails'
+
 def random_image
   [
     'https://i.pinimg.com/736x/d6/c9/fc/d6c9fcf5155be81b318904b1576a9242.jpg',
