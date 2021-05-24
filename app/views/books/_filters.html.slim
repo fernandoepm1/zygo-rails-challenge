@@ -1,11 +1,11 @@
 = search_form_for @q, url: books_index_path do |f|
-  .col-xs-4.col-lg-5
+  .col-sm-5.col-md-5
     = f.search_field :title_or_description_cont,
                       id: 'book-search',
                       class: 'form-control',
                       placeholder: 'Search by book title or description'
 
-  .col-xs-2.col-lg-3
+  .col-sm-3.col-md-3
     = f.select :author_id_eq,
                options_from_collection_for_select( \
                  @authors, :id, :name, @q.author_id_eq \
@@ -13,7 +13,7 @@
                { include_blank: 'Select Author' },
                class: 'form-control'
 
-  .col-xs-1.col-lg-2
+  .col-sm-4.col-md-4
     .btn.btn-success[type="button"]
       = sort_link(@q, :title, 'Book title', default_order: :desc)
-
+    =< link_to 'Clear', root_path, class: 'btn btn-danger'
