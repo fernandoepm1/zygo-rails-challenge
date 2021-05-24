@@ -3,6 +3,7 @@
 ## Dependencies
 
 - Ruby version 2.7.1
+- Bundler version 2.1.4
 - Rails version 6.1.3.2
 - Node.js and yarn
 - PostgreSQL
@@ -39,20 +40,20 @@ bundle exec rails db:create db:migrate db:seed
 
 ### General purposes
 
-- **Devise**: User authentication
-- **Kaminari**: Books pagination
-- **Ransack**: Filters and ordering implementation
-- **RailsAdmin**: Admin access/dashboard implementation
-- **Slim**: Template to simplify ERB views
+- [**Devise**](https://github.com/heartcombo/devise): User authentication
+- [**Kaminari**](https://github.com/kaminari/kaminari): Books pagination
+- [**Ransack**](https://github.com/activerecord-hackery/ransack): Filters and ordering implementation
+- [**RailsAdmin**](https://github.com/sferik/rails_admin): Admin access/dashboard implementation
+- [**Slim**](https://github.com/slim-template/slim): Template to simplify ERB views
 
 ### For testing
 
-- **Rspec**: To implement the test suite
-- **Faker**: Mocking additional data
-- **FactoryBot**: To implement factories
-- **DatabaseCleaner**: Clean test database in test environment
-- **RailsControllerTesting**: For additional methods/matchers
-- **ShouldaMatchers**: For additional methods/matchers
+- [**FactoryBot**](https://github.com/thoughtbot/factory_bot): To implement factories
+- [**Faker**](https://github.com/faker-ruby/faker): Mocking additional data
+- [**DatabaseCleaner**](https://github.com/DatabaseCleaner/database_cleaner): Clean test database in test environment
+- [**RailsControllerTesting**](https://github.com/rails/rails-controller-testing): For additional methods/matchers
+- [**Rspec**](https://github.com/rspec/rspec): To implement the test suite
+- [**ShouldaMatchers**](https://github.com/thoughtbot/shoulda-matchers): For additional methods/matchers
 
 ## Dashboard
 
