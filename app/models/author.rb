@@ -14,4 +14,6 @@ class Author < ApplicationRecord
   has_many :books
 
   validates :name, :age, presence: true
+  validates :age, numericality: { only_integer: true,
+                                  greater_than: 0 }
 end
