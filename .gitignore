@@ -46,12 +46,10 @@ db/*.sqlite3
 /capybara*
 /capybara-*.html
 /gems
-/spec/requests
-/spec/routing
-/spec/views
 /specifications
 node_modules
 public/packs
+public/packs-test
 rerun.txt
 pickle-email-*.html
 
