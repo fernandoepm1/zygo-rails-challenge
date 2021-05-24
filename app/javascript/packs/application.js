@@ -4,4 +4,5 @@
 //= require turbolinks
 //= require_tree .
 
+import 'bootstrap-icons/font/bootstrap-icons.css'
 require("packs/books/index")
