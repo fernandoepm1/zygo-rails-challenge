@@ -9,6 +9,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'devise'
 gem 'factory_bot_rails'
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
+gem 'font-awesome-sass'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'kaminari'
@@ -27,7 +29,6 @@ gem 'webpacker', '~> 5.0'
 group :development, :test do
   gem 'annotate'
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
   gem 'rspec-rails', '~> 5.0.0'
 end
 
