@@ -25,12 +25,12 @@ class User < ApplicationRecord
   validates :email, :password, presence: true
   validates :email, uniqueness: true
 
-  validate :valid_special_code?
+  validate :valid_special_code?, if: proc { admin }
 
   private
 
   def valid_special_code?
-    return if admin && special_code == '4DM1N_4C3SS'
+    return if special_code == '4DM1N_4C3SS'
 
     errors.add(:special_code)
   end
